@@ -1,6 +1,6 @@
 # AI micro-app starter
 
-> A small web app that sends a question to an AI model through **your own server route**, so your API key never reaches the browser. Starter kit for [Vibe Coding 101](https://github.com/Boyu-Zhang-UOI/Vibe_Coding_101), week 5.
+> A small web app that sends a question to an AI model through **your own server route**, so your API key never reaches the browser. Starter kit for [Building Software with AI](https://github.com/Boyu-Zhang-UOI/Vibe_Coding_101), week 5.
 
 **Live site:** [your Vercel production URL] · **Author:** [your name]
 
@@ -185,4 +185,4 @@ See the Cloudflare docs on [Workers static assets](https://developers.cloudflare
 
 ## How I built it
 
-Started from the Vibe Coding 101 week 5 starter. See [PROMPTS.md](PROMPTS.md) for how I used AI.
+Started from the Building Software with AI week 5 starter. See [PROMPTS.md](PROMPTS.md) for how I used AI.
