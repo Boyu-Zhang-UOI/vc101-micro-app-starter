@@ -1,13 +1,13 @@
 # AI micro-app starter
 
-> A small web app that sends a question to an AI model through **your own server route**, so your API key never reaches the browser. Starter kit for [Building Software with AI](https://github.com/Boyu-Zhang-UOI/Vibe_Coding_101), week 5.
+> A small web app that sends a question to an AI model through **your own server route**, so your API key never reaches the browser. Starter kit for [Building Apps with AI](https://boyu-zhang-uoi.github.io/building-apps-with-ai/), weeks 9 and 10.
 
 **Live site:** [your Vercel production URL] · **Author:** [your name]
 
 <!-- Homework: replace this section with 2–3 sentences about YOUR version of the app. -->
 ## About this app
 
-Right now it is "Plain English": type a question and get a short, plain-English answer. In week 5 you change the system prompt and the page to turn it into your own app.
+Right now it is "Plain English": type a question and get a short, plain-English answer. In week 9 you change the system prompt and the page to turn it into your own app.
 
 ## Where the key lives and who can read it
 
@@ -39,14 +39,14 @@ Right now it is "Plain English": type a question and get a short, plain-English 
 
 You need a GitHub account and a free LLM API key. A Codespace already has Node.js installed: the course uses Node.js 22 LTS (minimum 20.12). Check with `node --version`.
 
-1. **Make your own repository from this starter.** Follow [Start a project from a starter](https://github.com/Boyu-Zhang-UOI/Vibe_Coding_101/blob/main/setup/codespaces.md#start-a-project-from-a-starter) with the path `weeks/05-apis-secrets-servers/starter`, then open the repository in a Codespace.
+1. **Make your own repository from this starter.** Follow [Start a project from a starter](https://boyu-zhang-uoi.github.io/building-apps-with-ai/setup/codespaces.html#start-a-project-from-a-starter) with the `vc101-micro-app-starter` template, then open the repository in a Codespace.
 2. **Create your settings file.** In the Codespace terminal:
 
    ```bash
    cp .env.example .env
    ```
 
-3. **Get a free API key** from Google AI Studio (Gemini; you must be 18+) or, as the fallback, from the Groq console. [TOOLS.md](https://github.com/Boyu-Zhang-UOI/Vibe_Coding_101/blob/main/TOOLS.md) lists the current options.
+3. **Get a free API key** from Google AI Studio (Gemini; you must be 18+) or, as the fallback, from the Groq console. [TOOLS.md](https://boyu-zhang-uoi.github.io/building-apps-with-ai/TOOLS.html) lists the current options.
 
    > [!WARNING]
    > Paste the key **only** into `.env` in the Codespace editor. Never paste it into an AI chat, a Copilot prompt, an issue, a commit, or a file under `public/`. If it ever ends up anywhere else, delete the key on the provider's website and make a new one.
@@ -115,7 +115,7 @@ To check the packages your project uses for known security problems, run `npm au
 
 ## The provider-swap drill
 
-Every provider in [TOOLS.md](https://github.com/Boyu-Zhang-UOI/Vibe_Coding_101/blob/main/TOOLS.md) accepts the same "OpenAI-compatible" request, so switching is a configuration change, not a code change:
+Every provider in [TOOLS.md](https://boyu-zhang-uoi.github.io/building-apps-with-ai/TOOLS.html) accepts the same "OpenAI-compatible" request, so switching is a configuration change, not a code change:
 
 1. Get a key from a second provider (for example Groq).
 2. In `.env`, change all three lines: `LLM_BASE_URL` (see the commented examples in `.env.example`), `LLM_API_KEY`, and `LLM_MODEL` (run `npm run models` to pick one).
@@ -136,7 +136,7 @@ To swap the live site, change the same three variables in Vercel and redeploy.
 | "Port 3000 is already in use" | The server is already running in another terminal | Stop it there with `Ctrl+C`, or run `PORT=3001 npm run dev` |
 | The live site works but the AI part fails | Usually a missing environment variable on Vercel | Check Vercel → Settings → Environment Variables, then **Redeploy**. Vercel → your project → **Logs** shows the server's error messages |
 
-More help: [resources/troubleshooting.md](https://github.com/Boyu-Zhang-UOI/Vibe_Coding_101/blob/main/resources/troubleshooting.md).
+More help: [resources/troubleshooting.md](https://boyu-zhang-uoi.github.io/building-apps-with-ai/resources/troubleshooting.html).
 
 ## Cloudflare Workers fallback (optional)
 
@@ -185,4 +185,4 @@ See the Cloudflare docs on [Workers static assets](https://developers.cloudflare
 
 ## How I built it
 
-Started from the Building Software with AI week 5 starter. See [PROMPTS.md](PROMPTS.md) for how I used AI.
+Started from the Building Apps with AI week 9 starter. See [PROMPTS.md](PROMPTS.md) for how I used AI.
